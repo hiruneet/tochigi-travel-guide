@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栃木県2泊3日 完全旅行ガイド</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 80px;
+        position: relative;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP', sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .header {
+        text-align: center;
+        background: linear-gradient(135deg, #2e5bff 0%, #1a237e 100%);
+        color: white;
+        padding: 40px 20px;
+        margin: -32px -80px 40px -80px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .header h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        font-weight: 300;
+        opacity: 0.9;
+      }
+
+      .header .date {
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      .overview-box {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 10px;
+        border-left: 5px solid #2e5bff;
+        margin: 30px 0;
+      }
+
+      .day-section {
+        margin: 40px 0;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .day1 {
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        border-left: 6px solid #1976d2;
+      }
+      .day2 {
+        background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+        border-left: 6px solid #388e3c;
+      }
+      .day3 {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        border-left: 6px solid #f57c00;
+      }
+
+      .day-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .schedule-item {
+        background: white;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border-left: 3px solid;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .day1 .schedule-item {
+        border-left-color: #1976d2;
+      }
+      .day2 .schedule-item {
+        border-left-color: #388e3c;
+      }
+      .day3 .schedule-item {
+        border-left-color: #f57c00;
+      }
+
+      .time {
+        font-weight: 600;
+        color: #2e5bff;
+        font-size: 1.1rem;
+      }
+
+      .spot-detail {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: 1px solid #e0e0e0;
+      }
+
+      .spot-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #1976d2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .info-item {
+        padding: 8px 12px;
+        background: #f5f5f5;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+
+      .checklist {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .checklist input[type='checkbox'] {
+        margin-right: 10px;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffeeba;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .contact-box {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .movement-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      .movement-table th,
+      .movement-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .movement-table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+
+      .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .restaurant-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+      }
+
+      .souvenir-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .souvenir-item {
+        background: #f8f9fa;
+        padding: 12px;
+        border-radius: 6px;
+        border-left: 3px solid #2e5bff;
+      }
+
+      .final-message {
+        text-align: center;
+        margin: 40px 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #2e5bff 0%, #1a237e 100%);
+        color: white;
+        border-radius: 10px;
+      }
+
+      .spot-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .schedule-image {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin: 8px 0;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 16px 20px;
+        }
+
+        .header {
+          margin: -16px -20px 20px -20px;
+          padding: 30px 15px;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="header">
+      <img src="https://sspark.genspark.ai/cfimages?u1=HWdaWKSNsCFUCBIIy%2BZspbpW9GVQ3FPkysDzSxH8XaDEEYJCePLj5xpuY3idjFNTTXIuS1rjV09JCJjGdVUM4Jk7eIqzMB2tzYIPtZ2w7BG01WIhjJdu6w%3D%3D&amp;u2=f73ptW4JkZ7J1qiE&amp;width=2560" alt="華厳の滝" style="width: 100%; height: 250px; object-fit: cover; margin-bottom: 20px; border-radius: 10px" data-height-listener-added="true">
+      <h1>🗾 栃木県 2泊3日 完全旅行ガイド</h1>
+      <h2>日光・那須・佐野を巡る充実の旅</h2>
+      <div class="date">📅 2024年11月28日(木) ～ 30日(土)</div>
+    </div>
+
+    <div class="overview-box">
+      <h2>🚗 旅行概要</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>📍 集合:</strong> 11月28日 10:00<br>
+          JR宇都宮駅
+        </div>
+        <div class="info-item">
+          <strong>📍 解散:</strong> 11月30日 14:40<br>
+          JR宇都宮駅
+        </div>
+        <div class="info-item"><strong>🚙 移動手段:</strong> 自家用車</div>
+        <div class="info-item"><strong>👥 参加者:</strong> 家族・友人グループ</div>
+      </div>
+
+      <h3>🏨 宿泊先</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>1日目（11/28）:</strong><br>
+          奥日光ホテル四季彩<br>
+          📞 0570-022-251
+        </div>
+        <div class="info-item">
+          <strong>2日目（11/29）:</strong><br>
+          スーパーホテル佐野藤岡<br>
+          📞 0283-22-9000
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section day1">
+      <div class="day-title">
+        <span>🏯</span>
+        <span>1日目（11/28 木曜日）</span>
+      </div>
+      <h3>日光・奥日光エリア 世界遺産と大自然</h3>
+
+      <div class="schedule-item">
+        <div class="time">10:00</div>
+        <strong>🚗 JR宇都宮駅集合・出発</strong><br>
+        参加者全員で集合、移動開始（約45分）
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">11:15-13:45</div>
+        <strong>🏯 日光東照宮観光</strong><br>
+        徳川家康公が眠る華麗な霊廟・三猿や陽明門など見どころ満載<br>
+        💰 大人1,300円 | ⏱ 所要時間: 2-3時間 | 昼食・お土産購入も含む
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">14:00-14:30</div>
+        <strong>🌸 いろは坂ドライブ</strong><br>
+        <img src="https://sspark.genspark.ai/cfimages?u1=KsAITe99XskADSZa3aUIazARe9hIshFuWjpYFJmgWWYJu8%2FflqPpdZxsBzbs3vZ7xQNzOiQdz7cwEfY83%2Fxd8fgn8EarKUHL0DZMpIkYxflbHKWmpTGYPLeInSfAu4kh9wzUQdXxkgrD5TQCeSg9zMxI6xc7tjJZrpB8WFwFsSL7RZMbdiV0e79TsnBrM60lG0iS1IkFxNRD8TTRNz%2FxHBPuxRq5IHEuXOEmhF5X0mETmcWXfiE%3D&amp;u2=%2FqO9Q7TNt8z4ka1W&amp;width=2560" alt="いろは坂" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 5px; margin: 8px 0" data-height-listener-added="true">
+        48のカーブが続く絶景ドライブルート・紅葉の名所<br>
+        💡 ポイント: 車酔い注意・景色を楽しみながらゆっくり走行
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">14:45-15:30</div>
+        <strong>💧 華厳の滝</strong><br>
+        高さ97mの壮大な滝・日本三大名瀑の一つ<br>
+        💰 観爆台エレベーター往復530円 | ⏱ 所要時間: 30-45分
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">16:00</div>
+        <strong>🏨 奥日光ホテル四季彩チェックイン</strong><br>
+        中禅寺湖を望む静寂な温泉宿
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">16:30-18:00</div>
+        <strong>🌊 中禅寺湖散策</strong><br>
+        <img src="https://sspark.genspark.ai/cfimages?u1=SfqxOXxtaLtPa8XMcWGbzNYCTNeQi%2BtqRD4YviGCwhRFgncjS9y3HhveZrMDOQTGq81IpZ%2BLG7qGlz%2Bdhv1%2FHt0sxMT3QQt7Ytp8mBX2f1eN3b14%2FQTJ9DHqJ7%2B%2FFVt9sWmSWIr4rl1F&amp;u2=vtnNPyo5vwn4ZRSN&amp;width=2560" alt="中禅寺湖" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 5px; margin: 8px 0" data-height-listener-added="true">
+        標高1,269mの高原湖・湖畔散策でリフレッシュ<br>
+        18:00以降: 夕食・温泉・就寝
+      </div>
+    </div>
+
+    <div class="day-section day2">
+      <div class="day-title">
+        <span>🐄</span>
+        <span>2日目（11/29 金曜日）</span>
+      </div>
+      <h3>那須高原エリア 動物と温泉と光の世界</h3>
+
+      <div class="schedule-item">
+        <div class="time">7:00-9:00</div>
+        <strong>🌅 朝食・チェックアウト</strong><br>
+        ホテルの朝食を楽しんでから出発
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">9:30-10:00</div>
+        <strong>🦊 殺生石</strong><br>
+        九尾の狐伝説が残るミステリースポット<br>
+        💰 無料 | ⏱ 所要時間: 30分 | 💡 硫黄の香り漂う神秘的な場所
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">10:15-10:45</div>
+        <strong>🐄 南ヶ丘牧場</strong><br>
+        <img src="https://sspark.genspark.ai/cfimages?u1=pv0ZP5woet%2FGYg8RWpkvdz8oKafH0%2F6b7bapW4iEAm%2F1yuuFcrC5%2Fq2b1qPIitbMcWcKu%2BMrIAaMa6M9egwcW%2B%2Ft0wq5TC49&amp;u2=UIZocsD4ZgTRlL7J&amp;width=2560" alt="南ヶ丘牧場" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 5px; margin: 8px 0" data-height-listener-added="true">
+        入場無料の観光牧場・絶品ガーンジィ牛ソフトクリーム<br>
+        💰 入場無料 | 💡 動物ふれあい・お土産購入
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">11:00-15:30</div>
+        <strong>🦙 那須動物王国</strong><br>
+        カピバラやレッサーパンダなど可愛い動物たち<br>
+        💰 大人2,600円 | ⏱ 所要時間: 3-4時間 | 昼食含む<br>
+        💡 動物ショー・ふれあい体験・王国タウン&amp;ファーム
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">15:45-16:30</div>
+        <strong>♨️ 鹿の湯</strong><br>
+        1300年の歴史を誇る名湯・6種類の温度の湯<br>
+        💰 大人500円 | ⏱ 入浴15分推奨 | ⚠️ 高温・強酸性注意
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">16:45-17:45</div>
+        <strong>🚗 移動</strong><br>
+        那須→佐野へ移動（約1時間）
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">18:00</div>
+        <strong>🍜 佐野ラーメン夕食</strong><br>
+        あっさり醤油スープと青竹打ちちぢれ麺<br>
+        おすすめ店: 麺屋ようすけ・日向屋
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">18:30</div>
+        <strong>🏨 スーパーホテル佐野藤岡チェックイン</strong><br>
+        天然温泉付きビジネスホテル
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">20:00-21:30</div>
+        <strong>✨ あしかがフラワーパーク イルミネーション</strong><br>
+        500万球超の光の世界・日本三大イルミネーション<br>
+        💰 大人1,400円 | 🌟 点灯16:30-17:00頃 | ⚠️ 防寒対策必須
+      </div>
+    </div>
+
+    <div class="day-section day3">
+      <div class="day-title">
+        <span>🛍️</span>
+        <span>3日目（11/30 土曜日）</span>
+      </div>
+      <h3>佐野エリアとお土産タイム</h3>
+
+      <div class="schedule-item">
+        <div class="time">7:00-9:00</div>
+        <strong>🥐 朝食・チェックアウト</strong><br>
+        無料朝食付き・焼きたてパン健康朝食
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">9:30-13:30</div>
+        <strong>🛒 佐野周辺観光・ショッピング</strong><br>
+        佐野プレミアムアウトレット（オプション）・追加の佐野ラーメンランチ<br>
+        💡 時間に余裕があるのでゆっくり楽しめます
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">13:30-14:30</div>
+        <strong>🚗 JR宇都宮駅へ移動</strong><br>
+        約1時間の移動
+      </div>
+
+      <div class="schedule-item">
+        <div class="time">14:40</div>
+        <strong>👋 JR宇都宮駅で解散</strong><br>
+        お疲れ様でした！素敵な思い出をありがとうございました
+      </div>
+    </div>
+
+    <h2>🗺️ 各スポット詳細情報</h2>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=wrJFiSGoJSF%2FI3kriRut7o4O3GMr%2FXdhHYQFP6j3yiJROrjsI78obIihzLS59%2FqFd0TLFe4MEuYmrlV2bf2CtZEm9OfG1szoUP7mrqGtNGoB3q9TUb2yjcdmzcgS%2Bw7c8%2BHN9PrGrOAwog%3D%3D&amp;u2=U7AD%2BEaXEehhZKz1&amp;width=2560" alt="日光東照宮 三猿" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🏯 日光東照宮</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県日光市山内2301</div>
+        <div class="info-item">⏰ 9:00-16:30（11月）</div>
+        <div class="info-item">💰 大人1,300円</div>
+        <div class="info-item">⏱ 2-3時間</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 三猿（見ざる言わざる聞かざる）、陽明門（国宝）、眠り猫、家康公の墓所</p>
+      <p>🚗 <strong>駐車場:</strong> 周辺有料駐車場あり（600円前後）</p>
+      <p>💡 <strong>おすすめ:</strong> 朝早めの到着で混雑回避・音声ガイド利用推奨</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://www.toshogu.jp/" target="_blank" style="color: #2e5bff">https://www.toshogu.jp/</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=HWdaWKSNsCFUCBIIy%2BZspbpW9GVQ3FPkysDzSxH8XaDEEYJCePLj5xpuY3idjFNTTXIuS1rjV09JCJjGdVUM4Jk7eIqzMB2tzYIPtZ2w7BG01WIhjJdu6w%3D%3D&amp;u2=f73ptW4JkZ7J1qiE&amp;width=2560" alt="華厳の滝" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">💧 華厳の滝</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県日光市中宮祠</div>
+        <div class="info-item">⏰ エレベーター8:00-18:00</div>
+        <div class="info-item">💰 エレベーター往復530円</div>
+        <div class="info-item">⏱ 30-45分</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 日本三大名瀑、高さ97mの絶景、上部・下部両方からの眺め</p>
+      <p>💡 <strong>おすすめ:</strong> エレベーターで観爆台へ・迫力ある間近での観瀑</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://www.nikko-kankou.org/spot/5" target="_blank" style="color: #2e5bff">日光市観光協会</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=SfqxOXxtaLtPa8XMcWGbzNYCTNeQi%2BtqRD4YviGCwhRFgncjS9y3HhveZrMDOQTGq81IpZ%2BLG7qGlz%2Bdhv1%2FHt0sxMT3QQt7Ytp8mBX2f1eN3b14%2FQTJ9DHqJ7%2B%2FFVt9sWmSWIr4rl1F&amp;u2=vtnNPyo5vwn4ZRSN&amp;width=2560" alt="中禅寺湖" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🌊 中禅寺湖</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県日光市中宮祠</div>
+        <div class="info-item">⏰ 24時間</div>
+        <div class="info-item">💰 無料（遊覧船は別料金）</div>
+        <div class="info-item">⏱ 1-2時間</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 標高1,269mの高原湖、周囲25km、男体山の絶景</p>
+      <p>💡 <strong>おすすめ:</strong> 湖畔散策、遊覧船（1時間コース）、イタリア大使館別荘記念公園</p>
+      <p>
+        🔗 <strong>詳細:</strong>
+        <a href="https://www.nikko-kankou.org/spot/12" target="_blank" style="color: #2e5bff">日光市観光協会</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=s0E8gb9BCYIH%2Byj%2FvEj5Bjfwe13zV5YxWNqHCnhgP57XgWNO8mowJ6%2BUsPoFvvIlz11evgrLq0bKC57%2FgLEf5ahVwJICltRsMcaW261fY8x0i2pTYFWAN1FsrNKwTS4rD7Y3pitZlrcp6klIZw%3D%3D&amp;u2=Np%2BtKHZtAzG8JBLh&amp;width=2560" alt="殺生石" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🦊 殺生石</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県那須郡那須町湯本</div>
+        <div class="info-item">⏰ 24時間</div>
+        <div class="info-item">💰 無料</div>
+        <div class="info-item">⏱ 30分</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 九尾の狐伝説、硫黄ガス噴出、神秘的な荒涼風景</p>
+      <p>💡 <strong>おすすめ:</strong> 那須温泉神社と合わせて参拝・パワースポット巡り</p>
+      <p>
+        🔗 <strong>詳細:</strong>
+        <a href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" style="color: #2e5bff">とちぎ旅ネット</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=pv0ZP5woet%2FGYg8RWpkvdz8oKafH0%2F6b7bapW4iEAm%2F1yuuFcrC5%2Fq2b1qPIitbMcWcKu%2BMrIAaMa6M9egwcW%2B%2Ft0wq5TC49&amp;u2=UIZocsD4ZgTRlL7J&amp;width=2560" alt="南ヶ丘牧場" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🐄 南ヶ丘牧場</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県那須郡那須町湯本579</div>
+        <div class="info-item">⏰ 8:00-17:30</div>
+        <div class="info-item">💰 入場無料</div>
+        <div class="info-item">⏱ 1時間</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> ガーンジィ牛（国内約200頭）、動物ふれあい、絶品ソフトクリーム</p>
+      <p>💡 <strong>おすすめ:</strong> ガーンジィ牛乳を使った乳製品、アイスクリーム作り体験、釣り堀</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://www.minamigaoka.co.jp/" target="_blank" style="color: #2e5bff">https://www.minamigaoka.co.jp/</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=11X7GeLBfbu54Ha0TSbQjpLOWGbyvGLnuX%2F2KfZ4ddDP70w5UqGjPr0KU1L290bsRs6zPoqVUcL5bBoFd5ItU1jQLsem1%2B30Bg%3D%3D&amp;u2=AXdfgIvMYC4lplfq&amp;width=2560" alt="鹿の湯" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">♨️ 鹿の湯</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県那須郡那須町湯本181</div>
+        <div class="info-item">⏰ 8:00-18:00</div>
+        <div class="info-item">💰 大人500円、小人300円</div>
+        <div class="info-item">⏱ 15分程度</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 1300年の歴史、6種類の温度（41-48度）、かぶり湯の作法</p>
+      <p>⚠️ <strong>注意:</strong> 高温・強酸性のため短時間入浴推奨</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://www.shikanoyu.jp/" target="_blank" style="color: #2e5bff">https://www.shikanoyu.jp/</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=AEmuqqlx1yne6fi8KQHMcGRz5bqLvilitKdsznEOY4uD8m0RuxVAkDtaWKRgUkMPe0lknTbAv4IGndM%3D&amp;u2=0nLJ2kCcM7tDGUrk&amp;width=2560" alt="那須動物王国 カピバラ" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🦙 那須動物王国</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県那須郡那須町大島1042-1</div>
+        <div class="info-item">⏰ 平日10:00-16:30、土日祝9:00-17:00</div>
+        <div class="info-item">💰 大人2,600円、子供1,200円</div>
+        <div class="info-item">⏱ 3-4時間</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> カピバラ、レッサーパンダ、動物ショー、ふれあい体験</p>
+      <p>💡 <strong>おすすめ:</strong> 王国タウン→王国ファームの順で回る・動物ショー時間要チェック</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://nasu-oukoku.com/" target="_blank" style="color: #2e5bff">https://nasu-oukoku.com/</a>
+      </p>
+    </div>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=nFCJaHgttuoWlp2OTnvtgjOu3hFFbadHpR8VjWk7ILurv85bzWawMSkhgBW2LoQpW1ya5RI9jv7EUeb%2BXcDCAmCQSAo8k6h5eIzFsIZ7Bm1ipauac0MeG00%3D&amp;u2=9521wd5ostlTf9NO&amp;width=2560" alt="あしかがフラワーパーク イルミネーション" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">✨ あしかがフラワーパーク</div>
+      <div class="info-grid">
+        <div class="info-item">📍 栃木県足利市迫間町607</div>
+        <div class="info-item">⏰ 15:30-20:30（土日祝21:00まで）</div>
+        <div class="info-item">💰 大人1,400円、子供700円</div>
+        <div class="info-item">⏱ 1.5-2時間</div>
+      </div>
+      <p>✨ <strong>見どころ:</strong> 日本三大イルミネーション、500万球超の光、藤の花イルミネーション</p>
+      <p>💡 <strong>おすすめ:</strong> 点灯時刻16:30-17:00頃・防寒対策必須・写真撮影スポット多数</p>
+      <p>
+        🔗 <strong>公式サイト:</strong>
+        <a href="https://www.ashikaga.co.jp/" target="_blank" style="color: #2e5bff">https://www.ashikaga.co.jp/</a>
+      </p>
+    </div>
+
+    <h2>🍜 グルメ情報</h2>
+
+    <div class="spot-detail">
+      <img src="https://sspark.genspark.ai/cfimages?u1=2c8BoOzQqCjiIUkDOo3i77Ed4Pegrqmktr42cpYKUAcD%2F%2Byc3HtXF3DD1m2gJuq4qbyjMxU5unHUNJFz05Egs78vZzMQdI0YN%2BNrU%2FXwYwoY&amp;u2=OFgIBjev8SoQq7TM&amp;width=2560" alt="佐野ラーメン" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px" data-height-listener-added="true">
+      <div class="spot-title">🍜 佐野ラーメン</div>
+      <p><strong>特徴:</strong> あっさり醤油スープ × 青竹打ちちぢれ麺</p>
+
+      <div class="restaurant-grid">
+        <div class="restaurant-card">
+          <h4>麺屋ようすけ</h4>
+          <p>地元人気No.1の老舗</p>
+          <p>📍 佐野駅から徒歩8分</p>
+        </div>
+        <div class="restaurant-card">
+          <h4>青竹手打ラーメン 日向屋</h4>
+          <p>伝統の青竹打ち技法</p>
+          <p>💡 手作りにこだわった名店</p>
+        </div>
+        <div class="restaurant-card">
+          <h4>らーめん大金</h4>
+          <p>ボリューム満点</p>
+          <p>🍖 チャーシューが自慢</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>🎁 お土産情報</h2>
+    <div class="souvenir-grid">
+      <div class="souvenir-item">
+        <strong>日光ぷりん</strong><br>
+        450円 | 日光ぷりん亭
+      </div>
+      <div class="souvenir-item">
+        <strong>三猿人形焼き</strong><br>
+        みしまや | 東照宮名物
+      </div>
+      <div class="souvenir-item">
+        <strong>日光ラスク</strong><br>
+        元祖日昇堂 | サクサク食感
+      </div>
+      <div class="souvenir-item">
+        <strong>揚げゆばまんじゅう</strong><br>
+        日光さかえや | 日光名物湯波
+      </div>
+    </div>
+
+    <h2>📝 持ち物チェックリスト</h2>
+    <div class="checklist">
+      <label><input type="checkbox"> 運転免許証</label><br>
+      <label><input type="checkbox"> 現金・クレジットカード</label><br>
+      <label><input type="checkbox"> スマートフォン・充電器</label><br>
+      <label><input type="checkbox"> カメラ</label><br>
+      <label><input type="checkbox"> 温泉セット（タオル、着替え）</label><br>
+      <label><input type="checkbox"> 防寒着（11月は気温差大）</label><br>
+      <label><input type="checkbox"> 歩きやすい靴</label><br>
+      <label><input type="checkbox"> 雨具（折りたたみ傘）</label><br>
+      <label><input type="checkbox"> 健康保険証</label><br>
+      <label><input type="checkbox"> 各施設の割引クーポン</label>
+    </div>
+
+    <h2>⚠️ 注意事項</h2>
+
+    <div class="warning-box">
+      <h3>🚗 運転・移動関連</h3>
+      <ul>
+        <li><strong>いろは坂:</strong> 48の急カーブ連続・車酔い対策必須</li>
+        <li><strong>渋滞対策:</strong> 週末は渋滞の可能性・時間に余裕を</li>
+        <li><strong>ガソリン:</strong> 山間部は給油所少ない・事前給油推奨</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <h3>🌡️ 気候・服装</h3>
+      <ul>
+        <li><strong>11月の奥日光:</strong> 最高10-15度、最低0-5度</li>
+        <li><strong>防寒対策:</strong> 重ね着可能な服装・手袋・マフラー</li>
+        <li><strong>夜間イルミネーション:</strong> 特に寒いため厚手のコート</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <h3>♨️ 温泉・施設利用</h3>
+      <ul>
+        <li><strong>鹿の湯:</strong> 高温・強酸性・15分程度の短時間入浴</li>
+        <li><strong>営業時間:</strong> 季節変動あり・事前確認推奨</li>
+        <li><strong>那須動物王国:</strong> 広い施設・歩きやすい靴必須</li>
+      </ul>
+    </div>
+
+    <h2>🗺️ 移動時間マップ</h2>
+
+    <table class="movement-table">
+      <thead>
+        <tr>
+          <th>出発地</th>
+          <th>到着地</th>
+          <th>移動時間</th>
+          <th>距離・備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>JR宇都宮駅</td>
+          <td>日光東照宮</td>
+          <td>約45分</td>
+          <td>約42km（有料道路利用）</td>
+        </tr>
+        <tr>
+          <td>日光東照宮</td>
+          <td>華厳の滝</td>
+          <td>約30分</td>
+          <td>いろは坂経由</td>
+        </tr>
+        <tr>
+          <td>華厳の滝</td>
+          <td>ホテル四季彩</td>
+          <td>約10分</td>
+          <td>約5km</td>
+        </tr>
+        <tr>
+          <td>ホテル四季彩</td>
+          <td>殺生石</td>
+          <td>約1時間</td>
+          <td>約50km</td>
+        </tr>
+        <tr>
+          <td>那須動物王国</td>
+          <td>佐野ホテル</td>
+          <td>約1.5時間</td>
+          <td>約80km</td>
+        </tr>
+        <tr>
+          <td>佐野ホテル</td>
+          <td>フラワーパーク</td>
+          <td>約15分</td>
+          <td>約10km</td>
+        </tr>
+        <tr>
+          <td>佐野</td>
+          <td>JR宇都宮駅</td>
+          <td>約1時間</td>
+          <td>約60km</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>📞 緊急連絡先</h2>
+
+    <div class="contact-box">
+      <h3>🏨 宿泊施設</h3>
+      <ul>
+        <li><strong>奥日光ホテル四季彩:</strong> 0570-022-251</li>
+        <li><strong>スーパーホテル佐野藤岡:</strong> 0283-22-9000</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h3>🎯 観光協会</h3>
+      <ul>
+        <li><strong>日光市観光協会:</strong> 0288-22-1525</li>
+        <li><strong>那須町観光協会:</strong> 0287-76-2619</li>
+        <li><strong>佐野市観光協会:</strong> 0283-11-1775</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h3>🚨 緊急時</h3>
+      <ul>
+        <li><strong>警察:</strong> 110</li>
+        <li><strong>消防・救急:</strong> 119</li>
+        <li><strong>道路緊急ダイヤル:</strong> #9910</li>
+      </ul>
+    </div>
+
+    <h2>🌤️ 天気予報チェックポイント</h2>
+
+    <div class="warning-box">
+      <h3>11月下旬の栃木県気候</h3>
+      <ul>
+        <li><strong>平地（宇都宮・佐野）:</strong> 最高15-20度、最低5-10度</li>
+        <li><strong>山間部（日光・那須）:</strong> 最高10-15度、最低0-5度</li>
+        <li><strong>奥日光（中禅寺湖周辺）:</strong> 特に寒い・雪の可能性も</li>
+        <li><strong>朝晩の気温差:</strong> 15度以上の差・重ね着推奨</li>
+      </ul>
+      <p><strong>出発前チェック:</strong> 気象庁ホームページで最新天気予報を確認</p>
+      <p><strong>特に注意:</strong> 山間部の雪・路面凍結情報</p>
+    </div>
+
+    <div class="final-message">
+      <h3>🎌 素敵な栃木旅行を！</h3>
+      <p>このガイドが皆様の旅を更に充実したものにしますように</p>
+      <p>安全運転で、たくさんの思い出を作ってください 🚗💫</p>
+    </div>
+  
+
+</body></html>
